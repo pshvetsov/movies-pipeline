@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: _rating_per_country
+    description: This view is a middle between staging and dim
+
+  - name: dim_avg_rating_per_country
+    description: Aggregated table of average rating by countries.
+    columns:
+      - name: country
+        data_type: string
+        description: Countries
+
+      - name: average_rating
+        data_type: numeric
+        description: Average rating
+
+  - name: dim_num_movies_per_year
+    description: Aggregated table of total number of movies per year.
+    columns:
+      - name: release_year
+        data_type: numeric
+        description: Year of production
+
+      - name: number_of_movies
+        data_type: numeric
+        description: Number of movies
+
+  - name: dim_num_ratings_per_country
+    description: Aggregated table of total number of ratings per country.
+    columns:
+      - name: country
+        data_type: string
+        description: Country
+
+      - name: numer_of_ratings
+        data_type: numeric
+        description: Number of ratings
+

@@ -1,0 +1,14 @@
+default:
+  outputs:
+    dev:
+      dataset: movies_final
+      fixed_retries: 1
+      keyfile: "{{env_var('GCP_CREDENTIALS')}}"
+      location: europe-west3
+      method: service-account
+      priority: interactive
+      project: movies-pipeline
+      threads: 6
+      timeout_seconds: 300
+      type: bigquery
+  target: dev

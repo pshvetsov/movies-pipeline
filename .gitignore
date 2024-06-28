@@ -1,0 +1,13 @@
+#.env
+/airflow/dags/__pycache__
+/airflow/dags/src/__pycache__
+/airflow/dags/data/
+/airflow/dags/src/*.csv
+/airflow/logs/
+/dbt/logs/
+/dbt/target/
+/terraform/terraform.tfstate
+/terraform/terraform.tfstate.backup
+/terraform/.terraform
+.google
+.kaggle

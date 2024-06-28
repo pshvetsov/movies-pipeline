@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: staging
+    database: movies-pipeline
+    schema: movies_analytics
+    tables:
+      - name: movies_metadata
+      - name: ratings_small
+models:
+  - name: stg_movies
+    description: List of movies.
+    columns:
+      - name: id
+        data_type: numeric
+        description: Movie id.
+
+      - name: original_language
+        date_type: string
+        description: Original language of the movie.
+
+      - name: release_year
+        date_type: numeric
+        description: Release year of the movie.
+
+      - name: production_countries
+        date_type: string
+        description: Country of movie production.
+
+  - name: stg_ratings
+    description: Ratings information.
+    columns:
+      - name: userId
+        data_type: numeric
+        description: User id.
+
+      - name: movieId
+        data_type: numeric
+        description: Movie id.
+
+      - name: rating
+        data_type: numeric
+        description: User rating of the movie.
