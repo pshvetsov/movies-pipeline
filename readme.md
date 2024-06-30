@@ -75,8 +75,5 @@ You will need
 6. Go to the Airflow UI (port 8080). Both the username and password are `airflow`.
 7. Execute the DAG.
 
-## #TODO
-It would be good to move terraform into docker container, in order to simplify steps 4 and 5.
-
 ## Credits
 This project based mostly on [this](https://github.com/iamraphson/DE-2024-project-book-recommendation/tree/main) project, which in its turn is based on [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) project.
