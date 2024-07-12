@@ -49,7 +49,7 @@ You will need
 2. Run the following command to build and start the Docker containers:
 
    ```bash
-   docker-compose up --build
+   make up
    ```
 
 3. Set up your credential files:
@@ -58,22 +58,23 @@ You will need
    - The `.dbt/profiles.yml` file uses the Google credential file, so adjust only your region.
    
 4. Set up your environment variable `GOOGLE_APPLICATION_CREDENTIALS` to point to your Google JSON file.
-5. Navigate to the Terraform folder and execute the following commands:
+5. Execute Terraform with the following commands:
 
    ```bash
-   terraform init
+   make tf-init
    ```
    
    ```bash
-   terraform plan
-   ```
-   
-   ```bash
-   terraform apply
+   make infra-up
    ```
 
 6. Go to the Airflow UI (port 8080). Both the username and password are `airflow`.
 7. Execute the DAG.
+8. Unit test and formatting can be done with:
+
+   ```bash
+   make ci
+   ```
 
 ## Credits
 This project based mostly on [this](https://github.com/iamraphson/DE-2024-project-book-recommendation/tree/main) project, which in its turn is based on [Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) project.
